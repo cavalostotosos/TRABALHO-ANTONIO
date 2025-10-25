@@ -1,0 +1,682 @@
+.rubik-dirt-regular {
+    font-family: "Rubik Dirt", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+}
+
+.telainicial {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.conteudo-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 3vw;
+    padding: 0 2vw;
+}
+
+.rockstar-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 60px;
+    z-index: 10;
+    transition: transform 0.3s ease-out;
+}
+
+.rockstar-logo img {
+    width: 100%;
+    height: auto;
+}
+
+.imagemtitulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.imagemtitulo img {
+    width: auto;
+    max-width: 80vw;
+    height: auto;
+    max-height: 80vh;
+    object-fit: contain;
+    margin: 0;
+
+    filter: drop-shadow(40px 0px 40px rgba(0, 0, 0, 0.6))
+}
+
+.arthur {
+    margin-left: auto;
+}
+
+.arthur img {
+    height: 100vh;
+    width: auto;
+    max-width: 45vw;
+    object-fit: contain;
+
+    filter: drop-shadow(40px 10px 40px rgba(0, 0, 0, 0.5));
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.historia {
+    min-height: 100vh;
+    padding-top: 4rem;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    padding: 4rem 2rem;
+    gap: 2rem;
+    margin-bottom: 0;
+    background-color: #555454;
+}
+
+.historia .imagem img {
+    display: block;
+    max-width: 100%;
+    max-height: 60vh;
+    object-fit: contain;
+    border-radius: 1rem;
+}
+
+.historia .imagem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.historia .imagem2 {
+    display: none;
+}
+
+.historia .conteudo {
+    text-align: center;
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.historia .conteudo h1 {
+    font-family: "Metal Mania", system-ui;
+    margin-bottom: 2rem;
+    color: white;
+    font-size: 3rem;
+}
+
+.historia .conteudo span {
+    font-family: "Metal Mania", system-ui;
+    color: red;
+    font-size: 4rem;
+}
+
+.historia .conteudo p {
+    font-family: "Winky Rough", sans-serif;
+    font-size: 1.1rem;
+    padding: 0 0;
+    line-height: 1.8;
+}
+
+.separador {
+    width: 5px;
+    height: 25rem;
+    background-color: white;
+    margin: 2rem auto;
+    border-radius: 2rem;
+}
+
+.conteudo2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 0;
+    text-align: center;
+    width: 100%;
+    height: 7rem;
+    background-color: #d3d3d3;
+}
+
+.conteudo2 h3 {
+    font-family: "Metal Mania", system-ui;
+    font-size: 2rem;
+    color: black;
+}
+
+.icons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.icons img {
+    width: 40px;
+    height: auto;
+}
+
+.separador2 {
+    width: 90%;
+    height: 2px;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 2rem;
+}
+
+.personagens {
+    background-color: black;
+    padding-top: 0;
+}
+
+.personagens h1 {
+    font-family: "Metal Mania", system-ui;
+    color: white;
+    text-align: center;
+    padding: 5rem;
+    font-size: 3rem;
+}
+
+
+.container-arthur {
+    position: relative;
+    display: flex;
+    background-image: url(./page.bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 4rem;
+    flex-wrap: wrap;
+    z-index: 0;
+}
+
+.conteudoarthur,
+.posterarthur {
+    position: relative;
+    z-index: 1;
+}
+
+.plano-de-fundo img {
+    display: none;
+}
+
+.conteudoarthur {
+    max-width: 600px;
+    text-align: center;
+    padding: 2rem;
+    border-left: 4px solid black;
+    border-radius: 1rem;
+}
+
+
+.posterarthur img {
+    width: 270px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.conteudoarthur h2 {
+    font-family: "Metal Mania", system-ui;
+    color: white;
+    padding: 2rem;
+}
+
+.conteudoarthur h2 span {
+    font-size: 1.8rem;
+    -webkit-text-stroke: 0.5px black;
+    -webkit-text-fill-color: red;
+    color: red;
+
+}
+
+.conteudoarthur p {
+    font-family: "Winky Rough", sans-serif;
+    color: white;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.container-john {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 10rem 4rem;
+    flex-wrap: wrap;
+
+}
+
+.conteudojohn {
+    max-width: 600px;
+    text-align: center;
+    padding-right: 2rem;
+    border-right: 4px solid red;
+    font-family: "Winky Rough", sans-serif;
+    color: white;
+    border-radius: 1rem;
+}
+
+.imagemjohn img {
+    width: 270px;
+    height: auto;
+
+}
+
+.conteudojohn h2 {
+    font-family: "Metal Mania", sans-serif;
+    padding: 2rem;
+}
+
+.conteudojohn h2 span {
+    color: red;
+}
+
+.conteudojonh p {
+    line-height: 1.8;
+    font-size: 1rem
+}
+
+.container-Dutch {
+    position: relative;
+    display: flex;
+    background-image: url(./red-dead-redemption-2-4k-hfflcebr57by8t8c.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 4rem;
+    flex-wrap: wrap;
+}
+
+.dutchvan {
+    max-width: 600px;
+    text-align: center;
+    padding: 2rem;
+    border-right: 4px solid white;
+    border-radius: 1rem;
+}
+
+.imagemdutchvan img {
+    width: 370px;
+    height: auto;
+}
+
+.dutchvan h2 {
+    font-family: "Metal Mania", system-ui;
+    color: white;
+    padding: 2rem;
+}
+
+.dutchvan h2 span {
+    font-size: 1.8rem;
+    -webkit-text-stroke: 0.5px black;
+    -webkit-text-fill-color: red;
+    color: red;
+}
+
+.dutchvan p {
+    font-family: "Winky Rough", sans-serif;
+    color: white;
+    line-height: 1.8;
+    font-size: 1rem;
+    -webkit-text-stroke: 0.7px black;
+    -webkit-text-fill-color: white;
+}
+
+.container-galeria {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 40px;
+    gap: 10px;
+    max-width: 0 auto;
+    margin: 0 auto;
+    flex-wrap: nowrap;
+}
+
+.titulo {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.titulo h1 {
+    font-family: "Metal Mania", system-ui;
+    font-size: 3.5rem;
+    color: black;
+    margin: 0;
+
+}
+
+.container-capturas,
+.container-wildlife,
+.container-personagens {
+    flex: 0 1 30%;
+    text-align: center;
+}
+
+.container-capturas img,
+.container-wildlife img,
+.container-personagens img {
+    width: 100%;
+    height: auto;
+    max-width: 350px;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.container-capturas h2,
+.container-wildlife h2,
+.container-personagens h2 {
+    font-family: "Metal Mania", system-ui;
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: black;
+}
+
+
+/*conteudo da tela inicial*/
+@media (max-width: 1025px) {
+    .conteudo-flex {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5vh 5vw;
+        gap: 2vw;
+    }
+
+    .arthur {
+        margin-left: auto;
+    }
+
+    .arthur img {
+        height: 60vh;
+        width: auto;
+        max-width: 800vh;
+        object-fit: contain;
+    }
+}
+
+/*conteudo da tela inicial*/
+@media (max-width: 1024px) {
+    .conteudo-flex {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 5vh 4vw;
+    }
+
+    .arthur {
+        display: none;
+    }
+
+    .imagemtitulo img {
+        width: 55vw;
+        height: auto;
+        max-height: none;
+    }
+}
+
+/*conteudo da tela inical*/
+@media (max-width: 768px) {
+    .arthur img {
+        display: none;
+    }
+
+    .imagemtitulo img {
+        width: 55vw;
+    }
+
+    .conteudo-flex {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+}
+
+/*conteudo da tela inicial*/
+@media (max-width: 600px) {
+    .arthur img {
+        display: none;
+    }
+
+    .imagemtitulo img {
+        width: 65vw;
+    }
+
+    .conteudo-flex {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+}
+
+/*conteudo da tela incial*/
+@media (max-width: 400px) {
+    .arthur img {
+        display: none;
+    }
+
+    .imagemtitulo img {
+        width: 75vw;
+    }
+
+    .conteudo-flex {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+}
+
+/*conteudo da historia*/
+@media (max-width: 1033px) {
+    .historia {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .historia .imagem {
+        display: block;
+        margin-top: auto;
+    }
+
+    .historia .imagem img {
+        display: 70vw;
+        height: auto;
+    }
+
+    .separador {
+        display: none;
+    }
+
+}
+
+/*conteudo da historia*/
+@media (max-width: 624px) {
+
+    .historia .imagem2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .historia .imagem2 img {
+        max-width: 90vw;
+        height: auto;
+        object-fit: contain;
+        border-radius: 1rem;
+    }
+
+    .historia .imagem {
+        display: none;
+    }
+
+}
+
+/*conteudo dos personagens arthur*/
+@media (max-width: 1033px) {
+    .conteudoarthur {
+        border-left: none;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .container-arthur {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .posterarthur {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .posterarthur img {
+        margin: 0 auto;
+    }
+}
+
+/*conteudo dos personagens, John */
+@media (max-width: 1033px) {
+    .conteudojohn {
+        border-right: none;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .container-john {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .imagemjohn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .imagemjohn img {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1133px) {
+    .dutchvan {
+        border-right: none;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .container-Dutch {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .imagemdutchvan {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .imagemdutchvan img {
+        margin: 0 auto;
+    }
+
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(15px);
+    transition: all 2s;
+    transform: translateX(-100%);
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transition: all 2s;
+    transform: translateX(0);
+}
+
+.container-galeria :nth-child(2){
+    transition-delay: 400ms;
+}
+
+.container-galeria :nth-child(3){
+    transition-delay: 700ms;
+}
+
+.conteudo2 :nth-child(2){
+    transition-delay: 400ms;
+}
+
+.conteudo2 :nth-child(3){
+    transition-delay: 700ms;
+}

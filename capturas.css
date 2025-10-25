@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+.cabecalho {
+    width: 100%;
+    padding: 10px 20px 20px 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+}
+
+
+.titulo {
+    position: absolute;
+    left: 5rem;
+}
+
+.titulo img {
+    width: 200px;
+    height: auto;
+    display: block;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+    margin-left: 30rem;
+    gap: 5px;
+}
+
+.conteudo h1 {
+    font-family: "Metal Mania", system-ui;
+    font-size: 55px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 1px 0 0 0;
+    color: white;
+}
+
+.conteudo h3 {
+    font-family: "Winky Rough", sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 1px 0 0 0;
+    color: white;
+    margin-top: 2rem;
+}
+
+.rockstar {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 2rem;
+}
+
+.rockstar img {
+    width: 60px;
+    height: auto;
+}
+
+.container-galeria-capturas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 0;
+    padding-top: 50px;
+    width: 100%;
+}
+
+
+.container-galeria-capturas>div {
+    width: 100%;
+    margin: 0;
+    padding: 1px;
+}
+
+
+.container-galeria-capturas img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+@media (max-width: 1107px) {
+    .rockstar {
+        display: none;
+    }
+}
+
+@media (max-width: 994px) {
+    .conteudo {
+        margin-left: 22rem;
+    }
+
+    .conteudo h1 {
+        font-size: 40px;
+        letter-spacing: 1px;
+    }
+
+    .conteudo h3 {
+        font-size: 14px;
+        margin-top: 1rem;
+    }
+
+    .titulo img {
+        width: 130px;
+    }
+}
+
+@media (max-width: 768px) {
+    .conteudo {
+        margin-left: 11rem;
+    }
+
+    .conteudo h1 {
+        font-size: 35px;
+    }
+
+    .titulo {
+        left: 2rem;
+    }
+
+    .titulo img {
+        width: 110px;
+
+    }
+}
