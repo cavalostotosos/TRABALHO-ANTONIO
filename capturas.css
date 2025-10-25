@@ -7,11 +7,13 @@ body {
 
 .cabecalho {
     width: 100%;
-    padding: 10px 20px 20px 20px;
+    padding: 10px 20px;
     display: flex;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: space-between;
     position: relative;
+    height: 190px;
+    border-bottom: 2px solid white;
 }
 
 
