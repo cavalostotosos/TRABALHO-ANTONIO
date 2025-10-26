@@ -425,6 +425,39 @@ body {
     color: black;
 }
 
+.trailers {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: black;
+}
+
+.trailers .titulo h1 {
+    font-size: 60px;
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+    margin-bottom: 4rem;
+}
+
+.trailers .videos {
+    display: block;
+    margin: 0 auto 30px auto;
+    max-width: 560px;
+    transition: box-shadow 0.3s ease;
+}
+
+.trailers .videos iframe {
+    width: 100%;
+    height: 315px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.trailers .videos:hover iframe {
+    border: 4px solid red;
+    transform: scale(1.08);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3)
+}
 
 /*conteudo da tela inicial*/
 @media (max-width: 1025px) {
@@ -665,18 +698,18 @@ body {
     transform: translateX(0);
 }
 
-.container-galeria :nth-child(2){
+.container-galeria :nth-child(2) {
     transition-delay: 400ms;
 }
 
-.container-galeria :nth-child(3){
+.container-galeria :nth-child(3) {
     transition-delay: 700ms;
 }
 
-.conteudo2 :nth-child(2){
+.conteudo2 :nth-child(2) {
     transition-delay: 400ms;
 }
 
-.conteudo2 :nth-child(3){
+.conteudo2 :nth-child(3) {
     transition-delay: 700ms;
 }
